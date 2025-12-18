@@ -327,3 +327,17 @@ footer {
   font-weight: bold;
   color: #000;
 }
+
+/* Sembunyikan teks Privy asli */
+.privy-branding-text,
+[class*="privy"] a[href*="privy.com"] {
+    font-size: 0 !important;
+}
+
+/* Tambahkan teks custom */
+.privy-branding-text::after,
+[class*="privy"] a[href*="privy.com"]::after {
+    content: "Protected by Ugly Cat" !important;
+    font-size: 12px !important;
+    display: inline-block;
+  }
