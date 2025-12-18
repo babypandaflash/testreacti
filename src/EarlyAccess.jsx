@@ -15,7 +15,7 @@ const EarlyAccess = () => {
   useEffect(() => {
     if (window.Privy) {
       const privyInstance = new window.Privy({
-        appId: "YOUR_PRIVY_APP_ID",
+        appId: "cmj7qvm7c015sji0cqb9bdnxx",
         loginMethods: ['email']
       });
       setPrivy(privyInstance);
