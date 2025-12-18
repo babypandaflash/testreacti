@@ -1,0 +1,279 @@
+:root {
+  --bg: #0b0e14;
+  --card: #121826;
+  --primary: #6cf2c2;
+  --secondary: #8aa2ff;
+  --text: #e6e9f0;
+  --muted: #9aa4bf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.early-access-page {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #0b0e14;
+  border-bottom: 1px solid #1c2335;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.topbar img {
+  width: 36px;
+  height: 36px;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 64px;
+  right: 5px;
+  width: 210px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 16px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  z-index: 1200;
+}
+
+.hamburger-menu.open {
+  display: flex;
+}
+
+.hamburger-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu a:hover {
+  background: rgba(108, 242, 194, 0.15);
+  color: var(--primary);
+}
+
+.profile-avatar {
+  position: absolute;
+  right: 20px;
+  top: 72px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  z-index: 1100;
+  font-size: 1.2rem;
+}
+
+header {
+  margin-top: 64px;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b0e14, #121826);
+}
+
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+}
+
+header p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.login-card {
+  max-width: 420px;
+  margin: 60px auto;
+  background: var(--card);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.login-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(108, 242, 194, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.social-bar {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 40px 20px 20px;
+}
+
+.social-bar a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-bar a:hover {
+  background: var(--primary);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #1c2335;
+  font-size: 0.9rem;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.popup-card {
+  background: var(--card);
+  padding: 36px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.popup-card h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.popup-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  word-break: break-all;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.popup-card p strong {
+  color: var(--text);
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.popup-card button {
+  margin-top: 16px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  background: var(--primary);
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.popup-card button:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .login-card {
+    margin: 40px 20px;
+  }
+}
